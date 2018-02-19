@@ -6,7 +6,7 @@ Deploy application like a boss and nobody's watching at you
 
 `/opt/drone/drone-agent/profiles/my-deploy.sh`:
 
-```
+```shell
 #!/bin/bash
 
 deploy() {
@@ -25,7 +25,7 @@ main() {
 
 `.drone.yml`:
 
-```
+```yaml
 ---
 pipeline:
   deploy:
