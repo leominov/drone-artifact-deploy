@@ -11,21 +11,22 @@ fi
 
 SOURCE=$PLUGIN_SOURCE
 if [ -z "$PLUGIN_SOURCE" ]; then
-    echo "No source folder specified, using default './'"
-    SOURCE="./"
+	SOURCE="./"
+    echo "No source folder specified, using default: $SOURCE"
 fi
 
 USER=$PLUGIN_USER
 if [ -z "$PLUGIN_USER" ]; then
-    echo "No user specified, using root"
-    USER="root"
+	USER="root"
+    echo "No user specified, using default: $USER"
 fi
 
 PROFILES=$PLUGIN_PROFILES
 if [ -z "$PLUGIN_PROFILES" ]; then
-    echo "No profiles folder specified, using default '/profiles/'"
-    PROFILES="/profiles/"
+	PROFILES="/profiles/"
+    echo "No profiles folder specified, using default: $PROFILES"
 fi
 
+# shellcheck disable=SC1090
 source "$PROFILES/$PROFILE.sh"
 main
