@@ -1,9 +1,10 @@
 ---
 pipeline:
   pre_test:
-    image: koalaman/shellcheck:v0.4.7
+    image: ubuntu:16.04
     commands:
-      - "shellcheck *.sh"
+      - apt-get install -y shellcheck
+      - shellcheck **/*.sh
   build:
     image: docker
     commands:
