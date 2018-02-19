@@ -2,6 +2,7 @@
 pipeline:
   pre_test:
     image: koalaman/shellcheck:v0.4.7
+    entrypoint: shellcheck
     commands:
       - "*.sh"
   build:
