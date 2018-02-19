@@ -6,3 +6,7 @@ pipeline:
       - docker build -t drone-artifact-deploy:latest ./
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+  test:
+    image: drone-artifact-deploy:latest
+    profile: test
+    user: buildagent
