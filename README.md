@@ -12,8 +12,8 @@ Deploy application like a boss and nobody's watching at you
 deploy() {
     SSH_CMD="ssh -p 3389 -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o StrictHostKeyChecking=no $USER@server.com"
     SCP_CMD="scp -r -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o StrictHostKeyChecking=no"
-    "$SCP_CMD" "$SOURCE/" "$USER@server.com:/opt/application/"
-    "$SSH_CMD" systemctl restart applocation
+    eval "$SCP_CMD" "$SOURCE/" "$USER@server.com:/opt/application/"
+    eval "$SSH_CMD" systemctl restart applocation
 }
 
 main() {
