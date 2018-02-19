@@ -1,12 +1,16 @@
 ---
 pipeline:
+  pre_test:
+    image: koalaman/shellcheck:v0.4.7
+    commands:
+      - shellcheck *.sh
   build:
     image: docker
     commands:
       - docker build -t drone-artifact-deploy:latest ./
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-  test:
+  post_test:
     image: drone-artifact-deploy:latest
     profile: test
     profiles: ./profiles/
