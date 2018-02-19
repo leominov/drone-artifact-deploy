@@ -6,4 +6,3 @@ pipeline:
       - docker build -t drone-artifact-deploy:latest ./
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /opt/drone/drone-agent/profiles:/profiles
