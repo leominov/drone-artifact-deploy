@@ -9,4 +9,5 @@ pipeline:
   test:
     image: drone-artifact-deploy:latest
     profile: test
+    profiles: ./profiles/
     user: buildagent
