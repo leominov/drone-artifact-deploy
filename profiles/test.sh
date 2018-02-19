@@ -1,8 +1,8 @@
 #!/bin/bash
 
 deploy() {
-    CMD="date"
-    "$CMD"
+    CMD="hostname && date && whoami"
+    eval "$CMD"
 }
 
 main() {
