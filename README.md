@@ -10,7 +10,7 @@ Deploy application like a boss and nobody's watching at you
 #!/bin/bash
 
 deploy() {
-	SSH_CMD="ssh -p 3389 -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o StrictHostKeyChecking=no $USER@server.com"
+    SSH_CMD="ssh -p 3389 -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o StrictHostKeyChecking=no $USER@server.com"
     SCP_CMD="scp -r -o UserKnownHostsFile=/dev/null -o LogLevel=quiet -o StrictHostKeyChecking=no"
     "$SCP_CMD" "$SOURCE/" "$USER@server.com:/opt/application/"
     "$SSH_CMD" systemctl restart applocation
