@@ -3,7 +3,7 @@ pipeline:
   pre_test:
     image: koalaman/shellcheck:v0.4.7
     commands:
-      - shellcheck *.sh
+      - "*.sh"
   build:
     image: docker
     commands:
