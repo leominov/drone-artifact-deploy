@@ -11,19 +11,19 @@ fi
 
 SOURCE=$PLUGIN_SOURCE
 if [ -z "$PLUGIN_SOURCE" ]; then
-	SOURCE="./"
+    SOURCE="./"
     echo "No source folder specified, using default: $SOURCE"
 fi
 
 USER=$PLUGIN_USER
 if [ -z "$PLUGIN_USER" ]; then
-	USER="root"
+    USER="root"
     echo "No user specified, using default: $USER"
 fi
 
 PROFILES=$PLUGIN_PROFILES
 if [ -z "$PLUGIN_PROFILES" ]; then
-	PROFILES="/profiles/"
+    PROFILES="/profiles/"
     echo "No profiles folder specified, using default: $PROFILES"
 fi
 
